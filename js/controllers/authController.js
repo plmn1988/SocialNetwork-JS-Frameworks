@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('authController',
+app.controller('AuthController',
     function ($scope, $rootScope, $location, authService, notifyService) {
 
         $scope.register = function(userData) {

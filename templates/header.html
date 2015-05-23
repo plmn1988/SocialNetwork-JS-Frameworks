@@ -11,7 +11,7 @@
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" ng-if="authService.isLoggedIn">
                 <li><a href="#"><i class="glyphicon glyphicon-comment"></i> News Feed</a></li>
                 <li><a href="#"><i class="glyphicon glyphicon-user"></i> Friends Request</a></li>
                 <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Edit Profile</a></li>

@@ -7,15 +7,15 @@
         <div id="login" class="panel-body text-right">
             <p>
                 <label for="user-name">Username</label>
-                <input type="text" id="user-name" placeholder="Type your username"/>
+                <input type="text" id="user-name" ng-model="userData.username" placeholder="Type your username" required/>
             </p>
 
             <p>
                 <label for="user-password">Password</label>
-                <input type="password" id="user-password" placeholder="Type your password"/>
+                <input type="password" id="user-password" ng-model="userData.password" placeholder="Type your password" required/>
             </p>
 
-            <button type="button" class="btn btn-default">Login</button>
+            <button ng-click="login(userData)" type="button" class="btn btn-default">Login</button>
         </div>
     </div>
 
@@ -26,26 +26,26 @@
         <div id="register" class="panel-body text-right">
             <p>
                 <label for="register-username">Username</label>
-                <input type="text" id="register-username" placeholder="Type your username"/>
+                <input type="text" id="register-username" ng-model="user.username" placeholder="Type your username"/>
             </p>
 
             <p>
                 <label for="register-pass">Password</label>
-                <input type="password" id="register-pass" placeholder="Chose a password"/>
+                <input type="password" id="register-pass" ng-model="user.password" placeholder="Chose a password"/>
             </p>
 
             <p>
-                <input type="password" id="register-pass-confirm" placeholder="Confirm password"/>
+                <input type="password" id="register-pass-confirm" ng-model="user.confirmPassword" placeholder="Confirm password"/>
             </p>
 
             <p>
                 <label for="register-name">Name</label>
-                <input type="text" id="register-name" placeholder="Type your name"/>
+                <input type="text" id="register-name" ng-model="user.name" placeholder="Type your name"/>
             </p>
 
             <p>
                 <label for="register-email">Email</label>
-                <input type="email" id="register-email" placeholder="Type your email address"/>
+                <input type="email" id="register-email" ng-model="user.email" placeholder="Type your email address"/>
             </p>
 
             <p>
@@ -58,7 +58,7 @@
             </p>
 
 
-            <button type="button" class="btn btn-default">Register</button>
+            <button type="button" ng-click="register(user)" class="btn btn-default">Register</button>
         </div>
     </div>
 

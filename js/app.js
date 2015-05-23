@@ -2,13 +2,13 @@
 
 var app = angular.module('SocialNetwork', ['ngRoute', 'ngResource', 'ui.bootstrap.pagination']);
 
-app.constant('baseServiceUrl', 'http://softuni-ads.azurewebsites.net');
+app.constant('baseServiceUrl', 'http://softuni-social-network.azurewebsites.net');
 
 app.config(function ($routeProvider) {
 
     $routeProvider.when('/', {
         templateUrl: 'templates/partials/user-login-register.html',
-        controller: ''
+        controller: 'authController'
     });
 
     $routeProvider.when('/users/:username', {

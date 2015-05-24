@@ -11,6 +11,11 @@ app.config(function ($routeProvider) {
         controller: 'HomeController'
     });
 
+    $routeProvider.when('/profile/password', {
+        templateUrl: 'templates/partials/edit-password.html',
+        controller: 'AuthController'
+    });
+
 
 
     $routeProvider.otherwise(

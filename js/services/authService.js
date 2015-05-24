@@ -27,6 +27,19 @@ app.factory('authService',
                 }).error(error);
             },
 
+            changePassword: function(userData, success, error) {
+                var changePassword = {
+                    method: 'PUT',
+                    headers: this.getAuthHeaders(),
+                    url: baseServiceUrl + '/api/me/changepassword',
+                    data: userData
+                };
+                $http(changePassword).success(function(data) {
+                    sessionStorage['currentUser'] = JSON.stringify(data);
+                    success(data);
+                }).error(error);
+            },
+
             logout: function() {
                 delete sessionStorage['currentUser'];
             },

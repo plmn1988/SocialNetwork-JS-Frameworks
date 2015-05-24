@@ -1,10 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<div class="panel panel-default">
 
-</body>
-</html>
+    <div class="panel-heading">
+        <h3 class="panel-title">Edit Profile - TODO</h3>
+    </div>
+
+    <div class="panel-body col-md-4">
+        <input type='file'/>
+    </div>
+
+
+    <div class="panel-body col-lg-offset-4">
+        <p>
+            <label for="register-name">Name</label>
+            <input type="text" id="register-name" ng-model="user.name" placeholder="Type your name"/>
+        </p>
+
+        <p>
+            <label for="register-email">Email</label>
+            <input type="email" id="register-email" ng-model="user.email" placeholder="Type your email address"/>
+        </p>
+
+        <p>
+            <input type="radio" name="sex" id="sex-m" value="m">
+            <label for="sex-m">Male</label>
+            <input type="radio" name="sex" id="sex-f" value="f">
+            <label for="sex-f">Female</label>
+            <input type="radio" name="sex" id="sex-other" value="o">
+            <label for="sex-other">Other</label>
+        </p>
+
+
+        <button type="button" ng-click="register(user)" class="btn btn-default">Save Changes</button>
+
+    </div>
+
+
+</div>

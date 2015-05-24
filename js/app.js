@@ -16,6 +16,11 @@ app.config(function ($routeProvider) {
         controller: 'AuthController'
     });
 
+    $routeProvider.when('/profile', {
+        templateUrl: 'templates/partials/edit-profile.html',
+        controller: ''
+    });
+
 
 
     $routeProvider.otherwise(

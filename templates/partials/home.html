@@ -63,7 +63,9 @@
     </div>
 </div>
 
+
 <div ng-controller="AuthController" ng-if="authService.isLoggedIn()">
+    <div ng-include="'templates/partials/user-wall.html'"></div>
     <div ng-include="'templates/partials/friends-sidebar.html'"></div>
 </div>
 

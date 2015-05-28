@@ -10,7 +10,17 @@
     max-height: 60px;
     max-width: 55px;
     float: left;
-    margin-right: 5px;
+    padding-right: 10px;
+}
+
+#img-request {
+    max-width: 52px;
+    margin-right: 10px;
+}
+
+#ul-requests > li  {
+    width: 200px;
+    margin-bottom: 10px
 }
 
 #user-wall-post {
@@ -41,8 +51,8 @@
 }
 
 body {
-    margin-top: 80px;
-}
+     margin-top: 80px;
+ }
 
 #friends-sidebar {
     float: left;

@@ -81,6 +81,14 @@ app.factory('userService',
                     headers: authService.getAuthHeaders()
                 };
                 $http(request).success(success).error(error);
+            },
+            getFriendRequests: function (success, error) {
+                var request = {
+                    method: 'GET',
+                    url: baseServiceUrl + '/api/me/requests',
+                    headers: authService.getAuthHeaders()
+                };
+                $http(request).success(success).error(error);
             }
         }
     });

@@ -17,11 +17,10 @@ app.controller("HomeController", function ($scope, $rootScope, $routeParams, $lo
         var searchTerm = $scope.searchTerm;
         userService.searchUser(searchTerm,
             function success(data) {
-                $rootScope.$broadcast('searchButtonClicked', data);
-                $location.path('/search/:' + searchTerm);
+                $scope.data = data;
             },
             function error(err) {
-                notifyService.showError("Couldn't properly search for users", err);
+                notifyService.showError("Couldn't find anyone", err);
             });
     };
 
@@ -77,6 +76,17 @@ app.controller("HomeController", function ($scope, $rootScope, $routeParams, $lo
         } else {
             $scope.getAllUserFriends();
         }
+    };
+
+    $scope.getFriendRequests = function () {
+        userService.getFriendRequests(
+            function success(data) {
+                $scope.getRequests = data;
+            },
+            function error(err) {
+                notifyService.showError("Couldn't load the requests", err);
+            }
+        )
     };
 
     $scope.$on('showFriends', function (event, bool) {

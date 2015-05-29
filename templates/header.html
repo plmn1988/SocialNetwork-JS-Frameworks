@@ -13,8 +13,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="HomeController">
             <ul class="nav navbar-nav" ng-if="authService.isLoggedIn()">
                 <li><a href="#/"><i class="glyphicon glyphicon-comment"></i> News Feed</a></li>
-
-                <li class="dropdown" dropdown ng-controller="HomeController">
+                <li class="dropdown" dropdown ng-controller="FriendRequestController">
                     <a href="" class="dropdown-toggle" dropdown-toggle>
                         <i class="glyphicon glyphicon-user"></i> Friends Request
                         <span ng-init="getFriendRequests()" class="badge">{{getRequests.length}}</span>
@@ -22,15 +21,14 @@
                     <ul class="dropdown-menu" dropdown-menu ng-init="getFriendRequests()" id="ul-requests">
                         <li ng-repeat="getRequest in getRequests">
                             <div>
-                                <img ng-src="{{friend.profileImageData}}" src='img/no-image.jpg' id="img-request"  class="pull-left" />
+                                <img ng-src="{{getRequest.user.profileImageData}}" src='img/no-image.jpg' id="img-request"  class="pull-left" />
                                 <p>
                                     <span>{{getRequest.user.name}}</span>
                                 </p>
                                 <div>
-                                    <button class="btn btn-success btn-xs">Accept</button>
-                                    <button class="btn btn-danger btn-xs">Reject</button>
+                                    <button class="btn btn-success btn-xs" ng-click="acceptFriendRequest(getRequest.id)">Accept</button>
+                                    <button class="btn btn-danger btn-xs" ng-click="rejectFriendRequest(getRequest.id)">Reject</button>
                                 </div>
-
                             </div>
                         </li>
                     </ul>

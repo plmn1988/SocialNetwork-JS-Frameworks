@@ -15,13 +15,12 @@ app.controller("HomeController", function ($scope, $rootScope, $routeParams, $lo
 
     $scope.search = function () {
         var searchTerm = $scope.searchTerm;
-        userService.searchUser(searchTerm,
-            function success(data) {
-                $scope.data = data;
-            },
-            function error(err) {
-                notifyService.showError("Couldn't find anyone", err);
-            });
+        if(searchTerm != "") {
+            userService.searchUser(searchTerm,
+                function success(data) {
+                    $scope.data = data;
+                })
+        }
     };
 
     $scope.loadNewsFeed = function () {

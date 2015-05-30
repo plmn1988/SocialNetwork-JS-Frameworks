@@ -18,13 +18,13 @@ app.factory('userService',
                 };
                 $http(request).success(success).error(error);
             },
-            searchUser: function (searchTerm, success, error) {
+            searchUser: function (searchTerm, success) {
                 var request = {
                     method: 'GET',
                     url: baseServiceUrl + '/api/users/search?searchTerm=' + searchTerm,
                     headers: authService.getAuthHeaders()
                 };
-                $http(request).success(success).error(error);
+                $http(request).success(success);
             },
             getOwnFriends: function (success, error) {
                 var request = {

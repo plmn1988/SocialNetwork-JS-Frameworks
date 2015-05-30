@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('SocialNetwork', ['ngRoute', 'ngResource', 'ui.bootstrap.pagination', 'ui.bootstrap', 'autocomplete']);
+var app = angular.module('SocialNetwork', ['ngRoute', 'ngResource', 'ui.bootstrap.pagination', 'ui.bootstrap']);
 
 app.constant('baseServiceUrl', 'http://softuni-social-network.azurewebsites.net');
 

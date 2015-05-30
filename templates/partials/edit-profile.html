@@ -1,36 +1,41 @@
-<div class="panel panel-default">
+<div class="panel panel-default" ng-controller="UserEditProfileController">
 
     <div class="panel-heading">
-        <h3 class="panel-title">Edit Profile - TODO</h3>
+        <h3 class="panel-title">Edit Profile</h3>
     </div>
 
     <div class="panel-body col-md-4">
-        <input type='file'/>
+        <input type="file" accept="image/*" onchange="angular.element(this).scope().profileFileSelected(this)"
+               >
+        <div id="image-box">
+            <img ng-src="{{currentUserData.profileImageData}}" />
+        </div>
     </div>
+
 
 
     <div class="panel-body col-lg-offset-4">
         <p>
             <label for="register-name">Name</label>
-            <input type="text" id="register-name" ng-model="user.name" placeholder="Type your name"/>
+            <input type="text" id="register-name" ng-model="currentUserData.name" placeholder="Type your name"/>
         </p>
 
         <p>
             <label for="register-email">Email</label>
-            <input type="email" id="register-email" ng-model="user.email" placeholder="Type your email address"/>
+            <input type="email" id="register-email" ng-model="currentUserData.email" placeholder="Type your email address"/>
         </p>
 
         <p>
-            <input type="radio" name="sex" id="sex-m" value="m">
+            <input type="radio" ng-model="currentUserData.gender" name="sex" id="sex-m" value="1">
             <label for="sex-m">Male</label>
-            <input type="radio" name="sex" id="sex-f" value="f">
+            <input type="radio" ng-model="currentUserData.gender" name="sex" id="sex-f" value="2">
             <label for="sex-f">Female</label>
-            <input type="radio" name="sex" id="sex-other" value="o">
+            <input type="radio" ng-model="currentUserData.gender" name="sex" id="sex-other" value="3">
             <label for="sex-other">Other</label>
         </p>
 
 
-        <button type="button" ng-click="register(user)" class="btn btn-default">Save Changes</button>
+        <button type="button" ng-click="editProfile(currentUserData)" class="btn btn-default">Save Changes</button>
 
     </div>
 

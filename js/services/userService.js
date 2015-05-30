@@ -9,7 +9,7 @@ app.factory('userService',
                 };
                 $http(request).success(success).error(error);
             },
-            saveUserData: function (currentUserData, success, error) {
+            editUserData: function (currentUserData, success, error) {
                 var request = {
                     method: 'PUT',
                     url: baseServiceUrl + '/api/me',

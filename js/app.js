@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('SocialNetwork', ['ngRoute', 'ngResource', 'ui.bootstrap.pagination', 'ui.bootstrap']);
+var app = angular.module('SocialNetwork', ['ngRoute', 'ngResource', 'ui.bootstrap.pagination', 'ui.bootstrap', 'autocomplete']);
 
 app.constant('baseServiceUrl', 'http://softuni-social-network.azurewebsites.net');
 
@@ -18,7 +18,7 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when('/profile', {
         templateUrl: 'templates/partials/edit-profile.html',
-        controller: ''
+        controller: 'UserEditProfileController'
     });
 
 

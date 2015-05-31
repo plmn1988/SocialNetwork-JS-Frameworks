@@ -13,7 +13,7 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when('/profile/password', {
         templateUrl: 'templates/partials/edit-password.html',
-        controller: 'authController'
+        controller: 'AuthController'
     });
 
     $routeProvider.when('/profile', {

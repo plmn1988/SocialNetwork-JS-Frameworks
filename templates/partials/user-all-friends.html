@@ -1,7 +1,7 @@
-<div id="right-sidebar" class="panel panel-default pull-right" ng-init="getOwnFriends()">
-    <div class="panel-heading"><a href="#/user/friends">Friends</a> - {{friends.length}} total</div>
+<div class="panel panel-default" ng-init="getOwnFriends()">
+    <div class="panel-heading">Friends full list - {{friends.length}} total</div>
     <div class="panel-body">
-        <div ng-repeat="friend in friends | limitTo: 6">
+        <div ng-repeat="friend in friends | filter:searchFriend">
             <a ng-href="#/users/:{{friend.username}}">
                 <div id="friends-sidebar">
                     <img ng-src="{{friend.profileImageData}}" src='img/no-image.jpg'/>
@@ -10,4 +10,5 @@
             </a>
         </div>
     </div>
+    <div id="search-friend" class="col-xs-2"><input class="form-control" type="text" ng-model="searchFriend" placeholder="Search"></div>
 </div>

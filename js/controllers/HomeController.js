@@ -1,4 +1,4 @@
-app.controller("HomeController", function ($scope, $rootScope, $routeParams, $location, notifyService, userService, authService) {
+app.controller("HomeController", function ($scope, $rootScope, $routeParams, $location, notifyService, userService) {
     $scope.search = function () {
         var searchTerm = $scope.searchTerm;
         if(searchTerm != "") {

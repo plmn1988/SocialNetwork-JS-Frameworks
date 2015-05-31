@@ -21,6 +21,11 @@ app.config(function ($routeProvider) {
         controller: 'UserEditProfileController'
     });
 
+    $routeProvider.when('/user/friends', {
+        templateUrl: 'templates/partials/user-all-friends.html',
+        controller: 'HomeController'
+    });
+
     $routeProvider.otherwise(
         { redirectTo: '/' }
     );

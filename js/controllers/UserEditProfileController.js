@@ -1,5 +1,5 @@
 app.controller("UserEditProfileController", function ($scope, $rootScope, $routeParams, $location, notifyService, userService) {
-    $scope.reloadUserData = function () {
+    $scope.loadUserData = function () {
         userService.getCurrentUserData(
             function success(data) {
                 $scope.currentUserData = data;
@@ -9,7 +9,7 @@ app.controller("UserEditProfileController", function ($scope, $rootScope, $route
         );
     };
 
-    $scope.reloadUserData();
+    $scope.loadUserData();
 
     $scope.profileFileSelected = function(fileInputField) {
         delete $scope.currentUserData.profileImageData;

@@ -10,8 +10,8 @@
             <a class="navbar-brand text-capitalize" href="#/">Social Network</a>
         </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="HomeController">
-            <ul class="nav navbar-nav" ng-if="authService.isLoggedIn()">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-if="authService.isLoggedIn()" ng-controller="HomeController">
+            <ul class="nav navbar-nav" >
                 <li><a href="#/"><i class="glyphicon glyphicon-comment"></i> News Feed</a></li>
                 <li class="dropdown" dropdown ng-controller="FriendRequestController">
                     <a href="" class="dropdown-toggle" dropdown-toggle>

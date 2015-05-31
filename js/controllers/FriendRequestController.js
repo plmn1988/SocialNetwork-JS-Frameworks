@@ -25,7 +25,7 @@ app.controller("FriendRequestController", function ($scope, $rootScope, $routePa
     $scope.rejectFriendRequest = function (id) {
         friendRequestService.rejectFriendRequest(id,
             function success() {
-                notifyService.showInfo('Friend request rejected')
+                notifyService.showInfo('Friend request rejected');
                 $scope.getFriendRequests();
             },
             function error(err) {

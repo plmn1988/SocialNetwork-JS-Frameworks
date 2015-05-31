@@ -2,7 +2,7 @@
     width: 295px;
 }
 
-#post-body {
+.post-body {
     margin-top: 10px;
 }
 
@@ -81,4 +81,9 @@ body {
 
 .dropdown-menu {
     width: 196px !important;
+}
+
+#post-header {
+    margin-top: 5px;
+    margin-left: 5px;
 }

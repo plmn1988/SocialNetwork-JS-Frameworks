@@ -13,15 +13,13 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when('/profile/password', {
         templateUrl: 'templates/partials/edit-password.html',
-        controller: 'authController'
+        controller: 'AuthController'
     });
 
     $routeProvider.when('/profile', {
         templateUrl: 'templates/partials/edit-profile.html',
         controller: 'UserEditProfileController'
     });
-
-
 
     $routeProvider.otherwise(
         { redirectTo: '/' }
